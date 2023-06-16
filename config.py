@@ -20,8 +20,10 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 
 
+
+
 experiment_id = "0"
-metric_name = "recall_test"
+metric_name = "precision_test"
 
 # Step 2: define the metrices
 my_scoring = {
