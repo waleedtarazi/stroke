@@ -19,6 +19,10 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 
+
+experiment_id = "0"
+metric_name = "recall_test"
+
 # Step 2: define the metrices
 my_scoring = {
     "accuracy": "accuracy",
