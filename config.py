@@ -1,28 +1,20 @@
 import warnings
 warnings.filterwarnings("ignore")
-## for data
-
-
-
-from sklearn.ensemble import RandomForestClassifier
 
 from sklearn.tree import DecisionTreeClassifier
+
+# ensample imports 
+from sklearn.ensemble import (
+                              RandomForestClassifier, 
+                              GradientBoostingClassifier,
+)
+
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
-
-from sklearn.naive_bayes import GaussianNB
-from sklearn.ensemble import VotingClassifier
-from sklearn.ensemble import BaggingClassifier
-from sklearn.ensemble import GradientBoostingRegressor, GradientBoostingClassifier
-from sklearn.ensemble import AdaBoostClassifier
-
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
 
 
 
-
-experiment_id = "0"
+experiment_id = "473545552416447086"
 metric_name = "precision_test"
 
 # Step 2: define the metrices
@@ -70,5 +62,19 @@ models = {
         "classifier__min_samples_split": [2, 5],
         "classifier__min_samples_leaf": [1, 2]
     }
+}, 
+    "k_nearest_neighbors": {
+    "estimator": KNeighborsClassifier(),
+    "param_grid": {
+        "classifier__n_neighbors": [3, 5, 7],
+        "classifier__weights": ['uniform', 'distance'],
+        "classifier__algorithm": ['ball_tree', 'kd_tree', 'brute'],
+        "classifier__leaf_size": [10, 30, 50],
+        "classifier__p": [1, 2]
+            }
+        },
 }
-}
+
+        
+       
+
