@@ -48,8 +48,8 @@ form.addEventListener('submit', async (e) => {
   const prediction = await response.json();
   
   if (prediction.prediction === 1) {
-    alertContainer.innerHTML = '<div class="alert alert-danger">You are at risk of stroke. Please call 911 immediately.</div>';
+    alertContainer.innerHTML = '<div class="alert alert-danger">You are at risk of stroke. Please call 911 immediately &#x1F691; .</div>';
   } else {
-    alertContainer.innerHTML = '<div class="alert alert-success">You are not at risk of stroke. Keep yourself healthy.</div>';
+    alertContainer.innerHTML = '<div class="alert alert-success">You are not at risk of stroke &#x1F44F; . Keep yourself healthy &#x1F34F; .</div>';
   }
 });
