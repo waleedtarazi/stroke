@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stroke Prediction Form</title>
+    <style>
+      body {
+        background-image: url('https://via.placeholder.com/1200x800');
+        background-size: cover;
+        background-position: center;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .form-group {
+        width: 48%;
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type='text'] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      }
+      input[type='text']:focus {
+        outline: none;
+        box-shadow: 0px 0px 5px rgba(0, 0, 255, 0.3);
+      }
+      select {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      }
+      button[type='submit'] {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out;
+      }
+      button[type='submit']:hover {
+        background-color: #0069d9;
+      }
+      .alert {
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+      }
+      .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Stroke Prediction Form</h1>
+      <form>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="text" name="age" id="age" />
+        
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select name="gender" id="gender">
+            <option value="">Select an option</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="hypertension">Hypertension</label>
+          <select name="hypertension" id="hypertension">
+            <option value="">Select an option</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="heart-disease">Heart Disease</label>
+          <select name="heart-disease" id="heart-disease">
+            <optionvalue="">Select an option</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ever-married">Ever Married</label>
+          <select name="ever-married" id="ever-married">
+            <option value="">Select an option</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="work-type">Work Type</label>
+          <select name="work-type" id="work-type">
+            <option value="">Select an option</option>
+            <option value="Private">Private</option>
+            <option value="Self-employed">Self-employed</option>
+            <option value="Govt_job">Government Job</option>
+            <option value="children">Children</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="residence-type">Residence Type</label>
+          <select name="residence-type" id="residence-type">
+            <option value="">Select an option</option>
+            <option value="Urban">Urban</option>
+            <option value="Rural">Rural</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="avg-glucose-level">Average Glucose Level</label>
+          <input
+            type="text"
+            name="avg-glucose-level"
+            id="avg-glucose-level"
+          />
+        </div>
+        <div class="form-group">
+          <label for="bmi">BMI</label>
+          <input type="text" name="bmi" id="bmi" />
+        </div>
+        <div class="form-group">
+          <label for="smoking-status">Smoking Status</label>
+          <select name="smoking-status" id="smoking-status">
+            <option value="">Select an option</option>
+            <option value="never-smoked">Never Smoked</option>
+            <option value="formerly-smoked">Formerly Smoked</option>
+            <option value="smokes">Smokes</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="alert-container"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
